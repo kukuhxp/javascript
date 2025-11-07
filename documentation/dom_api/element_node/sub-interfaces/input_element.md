@@ -1,31 +1,30 @@
-# INPUT ELEMENT INTERFACE		
+# INPUT ELEMENT OBJECT
 
 ## Document Node Property
 
-- document.inputs
+- `document.images`
+- `document.forms`
 
 ## Document Node Methods
 
-- document.getElementById()
-- document.querySelector()
-- document.querySelectorAll()
-- document.getElementsByClassName()
-- document.getElementsByTagName("inputs")	
+- `document.getElementById()`
+- `document.querySelector()`
+- `document.querySelectorAll()`
+- `document.getElementsByClassName()`
+- `document.getElementsByTagName("inputs")`
 
-# INSTANCE PROPERTIES
+# INPUT ELEMENT INTERFACE
 
-## value
+## Instance Properties
 
-**Status:** Writable
+### value
 
-**Value:** String
+- **Status:** Writable
+- **Value:** String
+- **Syntax:** `object.value / object[index].value`
 
-**Syntax:** InputElement.value
+### type
 
-## type
-
-**Status:** Writable
-
-**Value:** String
-
-**Syntax:** InputElement.type
+- **Status:** Writable
+- **Value:** String
+- **Syntax:** `object.type / object[index].value`

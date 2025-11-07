@@ -1,111 +1,88 @@
 
 # ELEMENT OBJECT
 
-## Document Node Properties
+## Document Node Property
 
-- document.forms
-- document.images
+- `document.images`
+- `document.forms`
 
 ## Document Node Methods
 
-- document.getElementById()
-- document.querySelector()
-- document.querySelectorAll()
-- document.getElementsByClassName()
-- document.getElementsByTagName()
+- `document.getElementById()`
+- `document.querySelector()`
+- `document.querySelectorAll()`
+- `document.getElementsByClassName()`
+- `document.getElementsByTagName("images"e)`
 
 # ELEMENT INTERFACE
 
 ## Instance Properties:
 
-## attributes
+### attributes
 
-**Status:** Read-only
+- **Status:** Read-only
+- **Value:** Named Node Map
+- **Syntax:** `object.attributes / object[index].attributes`
 
-**Value:** Named Node Map
+### classList
 
-**Syntax:** Element.attributes / Element[index].attributes
+- **Status:** Read-only
+- **Value:** DOM Token List
+- **Syntax:** `object.classList / object[index].classList`
 
-## classList
+### children
 
-**Status:** Read-only
+- **Status:** Read-only
+- **Value:** HTML Collection
+- **Syntax:** `object.children / object[index].children`
 
-**Value:** DOM Token List
+### firstElementChild
 
-**Syntax:** Element.classList / Element[index].classList
+- **Status:** Read-only
+- **Value:** Element Node
+- **Syntax:** `object.firstElementChild / object[index].firstElementChild`
 
-## children
+### lastElementChild
 
-**Status:** Read-only
+- **Status:** Read-only
+- **Value:** Element Node
+- **Syntax:** `object.lastElementChild / object[index].lastElementChild`
 
-**Value:** HTML Collection
+### id
 
-**Syntax:** Element.children / Element[index].children
+- **Status:** Writable
+- **Value:** String
+- **Syntax:** `object.id / object[index].id`
 
-## firstElementChild
+### className
 
-**Status:** Read-only
+- **Status:** Read-only
+- **Value:** String
+- **Syntax:** `object.className / object[index].className`
 
-**Value:** Element Node
+### tagName
 
-**Syntax:** Element.firstElementChild / Element[index].firstElementChild
+- **Status:** Read-only
+- **Value:** String
+- **Syntax:** `object.tagName / object[index].tagName`
 
-## lastElementChild
+### clientWidth
 
-**Status:** Read-only
+- **Status:** Read-only
+- **Value:** Number
+- **Syntax:** `object.clientWidth / object[index].clientWidth`
 
-**Value:** Element Node
+### clientHeight
 
-**Syntax:** Element.lastElementChild / Element[index].lastElementChild
+- **Status:** Read-only
+- **Value:** Number
+- **Syntax:** `object.clientHeight / object[index].clientHeight`
 
-## id
+### scrollWidth
 
-**Status:** Writable
-
-**Value:** String
-
-**Syntax:** Element.id / Element[index].id
-
-## className
-
-**Status:** Read-only
-
-**Value:** String
-
-**Syntax:** Element.className / Element[index].className
-
-## tagName
-
-**Status:** Read-only
-
-**Value:** String
-
-**Syntax:** Element.tagName / Element[index].tagName
-
-## clientWidth
-
-**Status:** Read-only
-
-**Value:** Number
-
-**Syntax:** Element.clientWidth / Element[index].clientWidth
-
-## clientHeight
-
-**Status:** Read-only
-
-**Value:** Number
-
-**Syntax:** Element.clientHeight / Element[index].clientHeight
-
-## scrollWidth
-
-**Status:** Read-only
-
-**Value:** Number
-
-**Syntax:** Element.scrollWidth / Element[index].scrollWidth
-
+- **Status:** Read-only
+- **Value:** Number
+- **Syntax:** `object.scrollWidth / object[index].scrollWidth`
 
 ## scrollHeight
 

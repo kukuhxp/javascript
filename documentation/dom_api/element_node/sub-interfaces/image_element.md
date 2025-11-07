@@ -1,23 +1,23 @@
-# IMAGE ELEMENT INTERFACE
+# IMAGE ELEMENT OBJECT
 
 ## Document Node Property
 
-- document.images
+- `document.images`
 
 ## Document Node Methods
 
-- document.getElementById()
-- document.querySelector()
-- document.querySelectorAll()
-- document.getElementsByClassName()
-- document.getElementsByTagName("images")	
+- `document.getElementById()`
+- `document.querySelector()`
+- `document.querySelectorAll()`
+- `document.getElementsByClassName()`
+- `document.getElementsByTagName("images")`
 
-# INSTANCE PROPERTIES
+# IMAGE ELEMENT INTERFACE
 
-# src
+## Instance Properties
 
-**Status:** Writable
+### src
 
-**Value:** String
-
-**Syntax:** ImageElement.src
+- **Status:** Writable
+- **Value:** String
+- **Syntax:** `object.src / object[index].src`

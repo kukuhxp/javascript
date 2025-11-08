@@ -59,3 +59,7 @@ function functionName(e) {
 ## preventDefault()
 
 ## stopPropagation()
+
+## Callback Queue
+
+Callback queue adalah bagian dari mekanisme event loop dalam JavaScript yang menyimpan fungsi-fungsi yang siap dijalankan setelah stack utama kosong.

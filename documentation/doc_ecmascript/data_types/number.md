@@ -1,7 +1,6 @@
 # NUMBER TYPES
 
-## Declaration
-
+JavaScript tidak memiliki tipe data **integer** secara eksplisit, semua angka bertipe **number**.
 ```
 // Primitive types
 variable = 100;
@@ -10,11 +9,9 @@ variable = 100;
 variable = new Number(100);
 
 // Falsy number
-variable= 0;
-```
-## Special Numbers
+variable = 0;
 
-```
+// Special Numbers
 variable = Infinity;
 variable = NaN;
 ```

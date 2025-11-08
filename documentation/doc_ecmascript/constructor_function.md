@@ -1,13 +1,23 @@
 # CONSTRUCTOR FUNCTION
 
-## DECLARATION
-
 ```
-function constructorName(key, value) {
+// Declaration 
+function constructor(key, value) {
   this[key] = value;
 }
+
+// Initializing object
+let object = new constructor(value);
 ```
 
-## Instance Object
+## Built-in Constructor Function
 
-`variable = new constructorName(value);`
+1. String
+2. Number
+3. Function
+4. Object
+5. Array
+6. Date
+7. RegExp
+8. Set
+9. Map

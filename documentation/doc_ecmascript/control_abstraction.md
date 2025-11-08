@@ -1,10 +1,12 @@
-# ITERATOR
+# CONTROL ABSTRACTION
 
-# GENERATOR
+## Iterator
+
+## Generator
 
 ## Generator.prototype
 
-# INSTANCE METHODS
+# Instance Methods
 
 ## next()
 

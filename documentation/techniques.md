@@ -38,3 +38,31 @@ Hasil:
 fungsi console.log('Melakukan pencarian...') hanya dijalankan 500ms setelah pengguna berhenti mengetik.
 
 ## Throttle
+
+Event Delegation
+
+Event delegation adalah teknik menangani banyak event (misalnya klik pada banyak elemen anak) dengan satu event listener saja yang dipasang pada elemen induk.
+Alih-alih memberi event listener ke setiap elemen kecil, kita memanfaatkan event bubbling — yaitu mekanisme di mana event akan naik (propagate) dari elemen target ke elemen induknya.
+
+💡 Contoh:
+
+document.getElementById('list').addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    console.log('Item diklik:', event.target.textContent);
+  }
+});
+
+Di sini:
+
+Hanya ada satu event listener di elemen #list.
+
+Tapi bisa menangani semua klik pada <li> di dalamnya.
+
+
+⚙️ Keuntungan:
+
+Lebih efisien (tidak perlu ribuan listener).
+
+Mudah dipelihara.
+
+Bekerja meskipun elemen baru ditambahkan secara dinamis.

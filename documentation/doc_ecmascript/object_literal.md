@@ -1,52 +1,31 @@
 # OBJECT LITERAL
 
-## Object Declaration
-
 ```
-// Empty Object
+// Unassigned Object
 let object = {}
 
 // Assigned Object
-let obj = {
-  // Property
-  key: value,
-  
-  // Method
-  key: function() {
+let object = {
+  key: value, // Property
+  key: function() { // Method
     statements;
   }
 }
-```
 
-## Assigning The Key Value
-
-```
-// user is object
-const user = {};
-
-// name is key
-// "Mazzy" is value
-user.name = "Mazzy";
-```
-
-## Using The Object's Key
-
-```
+// Using The Object's Key
 object = {
   key: value,
   key: function () {
     statements;
   }
 }
-
 variable = object.property;
 variable = object.method();
-
 function(object.property);
 function(object.method());
 ```
 
-# This Keyword
+## This Keyword
 
 Operator this pada object merupakan cara mengakses property atau method milik object. Penggunaan this harus berada di dalam object.
 
@@ -93,3 +72,17 @@ function(object.object.method());
 ```
 
 ## Object Destructuring
+
+## Automatic Global Object
+
+JavaScript menentukan this secara otomatis berdasarkan cara function dipanggil.
+
+Contoh:
+
+```
+function showThis() { console.log(this); }
+
+showThis();           // this (window)
+obj = { showThis };
+obj.showThis();       // this (obj)
+```

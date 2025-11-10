@@ -1,5 +1,6 @@
 # ARRAY
 
+Example:
 ```
 // Unassigned array
 let array = [ ]
@@ -21,8 +22,6 @@ const array = Array.from("string");
 const array = Array(5).fill(0);
 ```
 
-
-
 ## Array Destructuring
 
 Syntax:
@@ -38,17 +37,17 @@ TypedArray adalah objek khusus yang digunakan untuk menyimpan dan mengelola data
 
 Kalau array biasa bisa menyimpan berbagai tipe data campuran seperti number, string, object, dst, typed array hanya bisa menyimpan satu jenis data numerik tertentu, misalnya 8-bit integer, 32-bit float, dan sebagainya.
 
-Struktur:
+### Structure of TypedArray
 
-1. ArrayBuffer
+#### 1. ArrayBuffer
 
-   Menyediakan ruang memori mentah, tidak tahu isi atau tipe datanya, hanya blok memori.
+Menyediakan ruang memori mentah, tidak tahu isi atau tipe datanya, hanya blok memori.
 
-2. TypedArray
+#### 2. TypedArray
 
-   Menyediakan view (tampilan) di atas ArrayBuffer. Menentukan bagaimana data diinterpretasikan misalnya, sebagai Int8, Uint16, Float32, dll.
+Menyediakan view (tampilan) di atas ArrayBuffer. Menentukan bagaimana data diinterpretasikan misalnya, sebagai Int8, Uint16, Float32, dll.
 
-3. DataView
+#### 3. DataView
 
    Alternatif fleksibel untuk mengakses ArrayBuffer dengan berbagai tipe data sekaligus.
 
@@ -69,8 +68,8 @@ Objects:
 
 ### copyWithin() / Array.prototype.copyWithin()
 
-- Parameters: Target, Start, End
+- Parameters: `Target, Start, End`
 
 ### flatMap() / Array.prototype.flatMap()
 
-- Parameters: callback(currentValue[, index[, array]])[, thisArg])
+- Parameters: `callback(currentValue[, index[, array]])[, thisArg])`

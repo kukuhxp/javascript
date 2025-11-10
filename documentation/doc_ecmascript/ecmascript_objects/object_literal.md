@@ -1,5 +1,6 @@
 # OBJECT LITERAL
 
+Example:
 ```
 // Unassigned Object
 let object = {}
@@ -19,8 +20,10 @@ object = {
     statements;
   }
 }
+
 variable = object.property;
 variable = object.method();
+
 function(object.property);
 function(object.method());
 ```
@@ -29,7 +32,7 @@ function(object.method());
 
 Operator this pada object merupakan cara mengakses property atau method milik object. Penggunaan this harus berada di dalam object.
 
-Contoh:
+Example:
 
 ```
 let object = {
@@ -41,6 +44,8 @@ let object = {
 ```
 
 ## Object Index
+
+Example:
 
 ```
 let object = {
@@ -58,6 +63,8 @@ function(person["country"]);
 ```
 
 ## Nested Property
+
+Example:
 
 ```
 let object = {
@@ -77,7 +84,7 @@ function(object.object.method());
 
 JavaScript menentukan this secara otomatis berdasarkan cara function dipanggil.
 
-Contoh:
+Example:
 
 ```
 function showThis() { console.log(this); }

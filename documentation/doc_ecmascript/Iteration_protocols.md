@@ -2,7 +2,7 @@
 
 ## Iterable Protocol
 
-Iterable Protocol di JavaScript adalah kontrak atau aturan yang menentukan bagaimana sebuah objek bisa “diulang” (iterated) menggunakan for...of, spread operator, atau destructuring).
+Iterable protocol di JavaScript adalah kontrak atau aturan yang menentukan bagaimana sebuah objek bisa “diulang” (iterated) menggunakan for...of, spread operator, atau destructuring).
 
 Syarat utama sebuah objek disebut iterable adalah:
 
@@ -33,10 +33,9 @@ Non-iterable Objects:
 4. Error
 5. Function
 
-Contoh:
+Example:
 
 ```
-
 const array = [1, 2, 3];
 const string = "abc";
 
@@ -50,7 +49,8 @@ for (const value of array) {
 
 const array = [10, 20, 30];
 const iterator = array[Symbol.iterator](); // Iterable Object
-// Symbol.iterator adalah method khusus yang mengembalikan iterator dari objek iterable.
+
+// Symbol.iterator is a special method that returns an iterator from an iterable object.
 
 console.log(iterator.next()); // { value: 10, done: false }
 console.log(iterator.next()); // { value: 20, done: false }
@@ -60,7 +60,7 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ## Iterator Protocol
 
-Iterator Protocol adalah aturan atau kontrak yang menentukan bagaimana sebuah objek menyediakan cara untuk mengakses elemen-elemennya secara berurutan. Dengan kata lain, ini adalah standar agar objek bisa “i-iterasi”satu per satu.
+Iterator protocol adalah aturan atau kontrak yang menentukan bagaimana sebuah objek menyediakan cara untuk mengakses elemen-elemennya secara berurutan. Dengan kata lain, ini adalah standar agar objek bisa “i-iterasi”satu per satu.
 
 Secara teknis, Iterator Protocol mensyaratkan bahwa sebuah objek harus memiliki method .next() yang mengembalikan sebuah objek dengan dua properti, yaitu value dan done.
 
@@ -78,9 +78,9 @@ Dengan iterator, kamu bisa mengontrol proses iterasi secara manual, tanpa harus 
 
 Value adalah nilai saat ini dalam iterasi, dan done adalah nilai false jika masih ada data, nilai true jika iterasi selesai.
 
-## User-defined Iterablez
+## User-defined Iterable
 
-Contoh:
+Example:
 
 ```
 const counter = { // Iterator Object
@@ -103,7 +103,7 @@ console.log(counter.next()); // { done: true }
 
 ## Generator
 
-Contoh;
+Example;
 
 ```
 function* generateNumbers() {
@@ -112,7 +112,7 @@ function* generateNumbers() {
   yield 3;
 }
 
-const it = generateNumbers();
+const it = generateNumbers(); // Generator object
 
 console.log(it.next()); // { value: 1, done: false }
 console.log(it.next()); // { value: 2, done: false }
@@ -124,7 +124,7 @@ console.log(it.next()); // { value: undefined, done: true }
 
 Iterator biasanya tidak dipakai manual, JavaScript punya control abstraction bernama for...of, yang menggunakan iterator di belakang layar secara otomatis.
 
-Contoh:
+Example:
 
 ```
 const arr = [1, 2, 3];
@@ -133,5 +133,8 @@ for (const value of arr) {
   console.log(value);
 }
 
-// Di balik layar, for...of memanggil arr[Symbol.iterator]() lalu next() terus-menerus sampai done: true.
+/*
+ * Behind the scenes, for...of calls arr[Symbol.iterator](),
+ * then next() continuously until done: true.
+ */
 ```

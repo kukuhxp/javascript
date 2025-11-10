@@ -2,7 +2,7 @@
 
 Class adalah **syntatic sugar** dari **constructor function**.
 
-Contoh:
+Example:
 
 ```
 class Robot {
@@ -21,7 +21,6 @@ r1.greet(); // "Halo, aku Astra"
 ## Synthetic Sugar
 
 Syntactic Sugar adalah cara penulisan kode yang dibuat lebih ringkas, mudah dibaca, dan nyaman bagi programmer, tanpa menambahkan fitur baru ke bahasa itu sendiri.
-
 
 ## First-class Object
 

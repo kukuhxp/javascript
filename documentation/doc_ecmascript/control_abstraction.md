@@ -6,32 +6,31 @@ Control abstraction memungkinkan kita mengelompokkan pola kontrol seperti loopin
 
 Dengan kata lain, kita menyembunyikan mekanisme kontrol di balik nama fungsi, prosedur, atau konstruk khusus.
 
-
-Contoh:
+Example:
 
 ```
-// Tanpa abstraksi kontrol, kamu mengatur detail bagaimana loop berjalan inisialisasi, kondisi, increment.
+/**
+ * Tanpa abstraksi kontrol,
+ * kamu mengatur detail bagaimana loop berjalan inisialisasi, kondisi, increment.
+ */
+ 
 let arr = [1, 2, 3];
 for (let i = 0; i < arr.length; i++) {
   console.log(arr[i]);
 }
 
-// Dengan abstraksi kontrol, kamu hanya memberi tahu apa yang harus dilakukan, bukan bagaimana melakukannya.
-forEach sudah menyembunyikan mekanisme loop, itulah control abstraction.
+/**
+ * Dengan abstraksi kontrol,
+ * kamu hanya memberi tahu apa yang harus dilakukan,bukan bagaimana melakukannya.
+ * forEach sudah menyembunyikan mekanisme loop, itulah control abstraction.
+ 
 arr.forEach(item => console.log(item));
 ```
 
-Konsep:
+Concept:
 
-1. Meningkatkan Keterbacaan Kode
-   
-   Programmer fokus pada tujuan alih-alih detail teknis.
+1. Meningkatkan keterbacaan kode, programmer fokus pada tujuan alih-alih detail teknis.
 
+2. Mengurangi duplikasi, logika kontrol umum ditulis sekali, lalu dipakai berulang.
 
-2. Mengurangi Duplikasi
-
-   Logika kontrol umum ditulis sekali, lalu dipakai berulang.
-
-3. Memudahkan Pemeliharaan
-
-   Jika cara kerja internal berubah, cukup ubah di satu tempat.
+3. Memudahkan pemeliharaan, jika cara kerja internal berubah, cukup ubah di satu tempat.

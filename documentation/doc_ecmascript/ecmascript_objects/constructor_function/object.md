@@ -8,6 +8,8 @@ Temporary object adalah objek yang dibuat secara otomatis dan hanya digunakan se
 
 Ketika kamu menggunakan nilai primitif seperti string, number, atau boolean) dan memanggil method di atasnya, JavaScript membuat temporary object agar method itu bisa dipanggil.
 
+Example:
+
 ```
 // String variable
 const text = "Halo";

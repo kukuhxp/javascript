@@ -2,27 +2,36 @@
 
 ## While Looping
 
+Example:
+
 ```
 while(condition) {
   statements;
   increment/decrement;
 }
+
+// You cannot declare variables inside a while condition.
 ```
 
-**Note:** Kamu tidak dapat mendeklarasikan variabel di dalam kondisi while.
-
 ## Do...While Looping
+
+Example:
 
 ```
 do {
   statements;
   increment/decrement;
 } while(condition)
+
+/**
+ * Statements in the body of the do statement are executed only once,
+ * even though the while condition evaluates to false.
+ */
 ```
 
-**Note:** Statements di dalam body do tetap tereksekusi satu kali saja, walaupun kondisi while bernilai false.
-
 ## For Looping
+
+Example:
 
 ```
 for(condition, increment/decrement) {
@@ -32,27 +41,22 @@ for(condition, increment/decrement) {
 
 ## Looping Control Flow
 
-**Skip The One of Iteration:**
+Example:
 
 ```
+// Skip the one of iteration
 for(condition, increment/decrement) {
   if(a == b) continue;
   statements;
 }
-```
 
-**Skip The More of Iteration:**
-
-```
+// Skip the more of iteration
 for(condition, increment/decrement) {
   if(a > b && a < b) continue;
   statements;
 }
-```
 
-**Stop The Next of Iteration:**
-
-```
+// Stop the next of iteration
 for(condition, increment/decrement) {
   if(a == b) break;
   statements;

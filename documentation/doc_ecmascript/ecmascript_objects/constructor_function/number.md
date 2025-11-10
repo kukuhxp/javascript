@@ -1,6 +1,8 @@
 # NUMBER TYPES
 
 JavaScript tidak memiliki tipe data **integer** secara eksplisit, semua angka bertipe **number**.
+
+Example:
 ```
 // Primitive types
 variable = 100;

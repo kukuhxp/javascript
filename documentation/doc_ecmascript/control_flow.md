@@ -2,28 +2,23 @@
 
 ## If...Else
 
-**One Condition:**
+Example:
 
 ```
+// One Condition
 if(condition) {
   statmeents;
 }
-```
 
-**Two Condition:**
-
-```
+// Two Condition
 if(condition) {
   statmeents;
 }
 else {
   statmeents;
 }
-```
 
-**Three or More Condition:**
-
-```
+// Three or More Condition
 if(condition 1) {
   statmeents;
 } else if(condition 2) {
@@ -34,6 +29,9 @@ if(condition 1) {
 ```
 
 ## Switch...Break
+
+Example:
+
 
 ```
 switch(object) {

@@ -1,14 +1,11 @@
 # GENERATOR
 
-## Generator.prototype
-
 ## Instance Methods
 
 ### next() / Generator.prototype.next()
 
-**Return Type:** Objects
-
-**Value:** `value, done`
+- Return Type: `Objects`
+- Value: `value, done`
 
 ### return() / Generator.prototype.return()
 

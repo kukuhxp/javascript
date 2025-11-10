@@ -4,47 +4,57 @@
 
 JavaScript menggunakan fitur loosely type, sehingga ketika membuat sebuah variabel, JavaScript tidak menyediakan keyword untuk mendeklarasikan tipe data dari variabel tersebut
 
-Jenis:
+## Jenis-jenis Variabel
 
-1. Let
+### 1. Let
 
-   ```
-   // Unassigned Variable
-   let variable;
+Example:
+
+```
+// Unassigned Variable
+let variable;
    
-   // Assigned Variable
-   let variable = value`
+// Assigned Variable
+let variable = value`
    
-   // Assigning Variable
-   let variable;
-   variable = value;
+// Assigning Variable
+let variable;
+
+variable = value;
    
-   // Reassigning Variable
-   let variableX;
-   variableX= value;
-   variablX = newValue;
-   let variableY = value;
-   let variableY= = newValue;
-   ```
+// Reassigning Variable
+let variableX;
 
-2. Const
-   ```
-   // Constant Variable
-   const a = 8;
-   a = 10; // Error
+variableX = value;
+variablX = newValue;
+```
 
-   // Constant Array
-   const b = [10, 9];
-   b = [2, 5]; // Error
+### 2. Const
+
+Example:
+
+```
+// Constant Variable
+const a = 8;
+
+a = 10; // Error
+
+// Constant Array
+const b = [10, 9];
+
+b = [2, 5]; // Error
    
-   // Constant Object
-   const c = {age: 20};
-   c = {age: 23}; // Error
-   ```
+// Constant Object
+const c = {age: 20};
 
-3. Var
+c = {age: 23}; // Error
+```
+
+### 3. Var
 
 ## Variable Scope
+
+Example:
 
 ```
 global variable
@@ -55,56 +65,62 @@ global variable
 
 ## Auto-boxing, Boxing & Unboxing
 
-1. Auto-boxing
+### 1. Auto-boxing
 
-   ```
-   let variable = value;
-   variable.method();
-   ```
+Example:
 
-2. Boxing & Unboxing
+```
+let variable = value;
+variable.method();
+```
 
-   ```
-   // Boxing
-   let object = new Object(value);
+### 2. Boxing & Unboxing
+
+Example:
+
+```
+// Boxing
+let object = new Object(value);
    
-   // Unboxing  
-   let object = Object.method();
-   ```
+// Unboxing  
+let object = Object.method();
+```
 
 ## Casting
 
-1. Implicit Casting
+## 1. Implicit Casting
 
-   Casting yang dilakukan secara otomatis tanpa menggunakan method apapun.
+Casting yang dilakukan secara otomatis tanpa menggunakan method apapun.
    
-2. Explicit Casting
+## 2. Explicit Casting
 
-   Casting yang dilakukan secara manual dengan menggunakan method.
+Casting yang dilakukan secara manual dengan menggunakan method.
 
 ## Type Coercion
 
 JavaScript bisa mengubah tipe data secara otomatis saat dibutuhkan. Kadang type coercion itu berguna, tapi juga sebagai sumber bug, karena JavaScript ingin menjadi terlalu pintar.
 
-Contoh:
+Example:
 
 ```
-console.log("5" - 2); // 3, string "5" diubah jadi number
-console.log("5" + 2); // "52", karena ada +, maka 2 diubah jadi string
+console.log("5" - 2); // 3, the string "5" has changed to number.
+console.log("5" + 2); // "52", because there is +, so 2 change to string.
 ```
 
 ## Hoisting
 
 Hoisting adalah mekanisme dalam JavaScript di mana deklarasi variabel dan fungsi diangkat ke atas scope-nya sebelum kode dijalankan.
 
-Contoh:
+Example:
 
 ```
-sayHi(); // ✅ Berjalan
+sayHi(); // ✅ Success
+
 function sayHi() { console.log("Hai!"); }
 
-// Tapi hati-hati dengan let atau const
+// Be careful with let and const
 console.log(x); // ❌ ReferenceError
+
 let x = 10;
 ```
 
@@ -113,10 +129,11 @@ let x = 10;
 Jika kamu membuat variabel tanpa let, const, atau var,
 JavaScript secara otomatis menambahkannya ke objek global.
 
-Contoh:
+Example:
 
 ```
-x = 10; // ❌ Buruk, tapi valid
+x = 10; // ❌ Bad, but valid 
+
 console.log(window.x); // 10
 ```
 ## Loosely Typed
@@ -127,10 +144,10 @@ Loosely typed atau dynamically typed adalah karakteristik dari bahasa pemrograma
 
 Variabel bisa berganti tipe data kapan saja, karena JavaScript bukan bahasa statis, tipe data tidak dikunci.
 
-Contoh:
+Example:
 
 ```
-let value = 42;      // number
-value = "Hello";     // string
-value = true;        // boolean
+let value = 42;      // Number
+value = "Hello";     // String
+value = true;        // Boolean
 ```

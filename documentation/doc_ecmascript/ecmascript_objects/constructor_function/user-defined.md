@@ -1,5 +1,7 @@
 # CONSTRUCTOR FUNCTION
 
+Example:
+
 ```
 // Declaration 
 function constructor(key, value) {

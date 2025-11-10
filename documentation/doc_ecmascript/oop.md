@@ -6,9 +6,10 @@ Prototypal inheritance adalah mekanisme pewarisan dalam JavaScript di mana objek
 
 Setiap objek secara otomatis mewarisi properti dan method dari prototype-nya.
 
-Contoh:
+Example:
 
 ```
 let arr = [1, 2, 3];
-console.log(arr.toString()); // berasal dari Array.prototype
+
+console.log(arr.toString()); // Derived from Array.prototype
 ```

@@ -1,7 +1,3 @@
-# NAMESNODEMAP INTERFACE
+# NAMED NODE MAP INTERFACE
 
-## Document Node Property
-
-- document.attributes
-
-# INSTANCE PROPERTY
+## Named Node Map Instance Properties

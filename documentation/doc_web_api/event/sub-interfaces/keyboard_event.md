@@ -1,21 +1,7 @@
-## Keyboard Events
+# KEYBOARD EVENT
 
-- `keydown`
-- `keyup`
-- `keypress`
- 
-## Mouse Events
+## keydown / onkeydown
 
-- `click`
-- `dblclick`
-- `mousedown`
-- `mouseup`
-- `mousemove`
- 
-## Form Events
+## keyup / onkeyup
 
-- `submit`
-- `change`
-- `input`
-- `focus`
-- `blur`
+## keypress / onkeypress

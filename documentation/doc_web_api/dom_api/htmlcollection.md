@@ -1,42 +1,39 @@
-# HTML COLLECTION INTERFACE		
+# HTML COLLECTION INTERFACE
 
-## Document Node Properties
+HTMLCollection bukan array, tetapi objek mirip array atau **array-like object** yang berisi kumpulan elemen (element nodes) dari dokumen HTML.
 
-- document.all
-- document.forms
-- document.images
+Artinya, isinya memang kumpulan element node seperti <div>, <p>, <span>, dll. Tapi secara tipe data, HTMLCollection bukanlah array, jadi kamu tidak bisa langsung memakai semua metode array seperti .map(), .forEach(), atau .filter() kecuali dikonversi dulu.
 
-## Document Node Methods
+Example:
 
-- document.getElementsByClassName()
-- document.getElementsByTagName()
+```
+// HTML
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
 
-## Element Node Properties		
+const divs = document.getElementsByTagName("div");
 
-- Element.children
-- Element[index].children
+console.log(divs); // HTMLCollection
+console.log(divs[0]); // First element
+console.log(divs.length); // Element total (5 elements)
 
-# INSTANCE PROPERTY
+// If you want to use the array method
+Array.from(divs).forEach(div => console.log(div));
+```
 
-## length
+## HTML Collection Instance Properties
 
-**Status:** Read-only
+### length / HTMLCollection.length
 
-**Value:** Number
+- Status: `Read-only`
+- Value: `Number`
 
-**Syntax:** HTMLCollection.length
+## HTML Collection Instance Methods
 
-**Example:** document.getElementsByClassName("my-class").length
+### item() / HTMLCollection.item()
 
-
-# INSTANCE METHODS
-
-## item()
-
-**Parameters:** Index
-
-**Return Type:** Element Node
-
-**Syntax:** HTMLCollection.item(index)
-
-**Example:** document.getElementsByClassName("my-class").item()
+- Parameters: `Index`
+- Return Type: `Element Node`

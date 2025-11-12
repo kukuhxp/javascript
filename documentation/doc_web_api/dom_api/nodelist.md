@@ -1,19 +1,33 @@
 # NODE LIST INTERFACE
 
-## Document Node Method
+NodeList adalah objek mirip array atau **array-like object** yang berisi kumpulan node dari DOM.
 
-- document.querySelectorAll()
+Example:
 
-## Element Node Property
+```
+// HTML
+<div id="box">
+   Hello <span>World</span>!
+</div>
 
-- Element.childNodes
+// JS
+let nodes = document.getElementById("box").childNodes;
 
-# INSTANCE METHODS
+console.log(nodes);
 
-## forEach()
+nodes.forEach(node => {
+   console.log(node.nodeName, "-", node.textContent);
+});
 
-**Parameters:** 
+// Output
+#text (Hello)
+SPAN (<span>World</span>)
+#text (!)
+```
 
-**Return Type:** Node List
+## Node List Instance Methods
 
-**Syntax:** NodeList.forEach()
+### forEach() / NodeList.forEach()
+
+- Parameters: ``
+- Return Type: `NodeList`

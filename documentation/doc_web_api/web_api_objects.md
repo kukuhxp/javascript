@@ -3,7 +3,7 @@
 
 ## DOM API Objects
 
-   Contoh:
+   Example:
 
 - Global: `window.`
 - Document Node: `document.`
@@ -15,7 +15,7 @@
 
 ## Web API Objects
 
-   Contoh:
+   Example:
 
 - Geolocation API: `navigator.geolocation.`
 - Canvas API `CanvasRenderingContext2D.`

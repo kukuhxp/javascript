@@ -1,4 +1,6 @@
-# OBJECT LITERAL
+# OBJECT
+
+## Object Literal
 
 Example:
 ```
@@ -93,3 +95,20 @@ showThis();           // this (window)
 obj = { showThis };
 obj.showThis();       // this (obj)
 ```
+
+## Object Constructor Function
+
+Example:
+
+```
+const user = new Object();
+user.name = "Kukuh";
+user.age = 25;
+```
+## Object Static Methods
+
+### keys() / Object.keys()
+
+### values() / Object.values()
+
+### entries() / Object.entries()

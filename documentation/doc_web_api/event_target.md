@@ -1,128 +1,119 @@
 # EVENT TARGET INTERFACE
 
-## Event Target Objects
+EventTarget adalah objek dasar (interface) di JavaScript yang digunakan oleh semua objek yang bisa menerima dan mengelola event. Jadi, semua objek yang bisa menerima event seperti window, document, atau elemen HTML adalah turunan dari EventTarget.
 
-- Window Interface
-- Document Node
-- Element Node
 
-# CONSTRUCTOR
+## Event Target Constructor Function
 
-## EventTarget()
+Example:
 
-**Syntax:** `variable = new EventTarget()`
+```
+let object = new EventTarget();
 
-# INSTANCE METHODS
+object.property;
+object.method();
+```
 
-## addEventListener()
+## Event Target Instance Methods
+
+### addEventListener() / EventTarget.addEventListener()
 
 Method yang digunakan untuk menambahkan event dan function pada element node.
 
-## removeEventListener()
+Example:
 
-Method yang digunakan untuk menghilangkan event dan function pada element node.
-
-## dispatchEvent()
-
-# EVENT TARGET
-
-## Event Expression
-
-**Syntax:**
-
-`element.event = function() { statements; }`
-
-**Syntax:**
-    
-`element.event = functionName;`
-
-## Event Listener
-
-**Syntax:**
 ```
-element.eventListener("event", function() {
- callback, statements;
+EventTarget.addEventListener("event", function(e) {
+   functionBody;
+});
+
+// Arrow Function Version
+EventTarget.addEventListener("event", (e) => {
+   functionBody;
 });
 ```
 
-**Syntax:**
+Event:
+
+- onclick (click)
+- onkeypress (keypress)
+
+### Callback without Parameters in addEventListener()
+
+Callback pada addEventListener tidak perlu diberi parameter ketika dituliskan, karena browser yang akan memanggil fungsi itu dan otomatis mengirimkan objek event-nya.
+
+Example:
 
 ```
-element.eventListener("event", () => {
- callback, statements;
+function callback() {
+   functionBody;
+}
+
+EventTarget.addEventListener("event", callback); // Assigning ✅
+EventTarget.addEventListener("event", callback(parameters)); // Invoking without event ❌
+```
+
+### Callback with Parameters in addEventListener()
+
+Example:
+
+```
+function callback(Paramaters) {
+   functionBody;
+}
+
+EventTarget.addEventListener("event", function(e) {
+   functionBody;
+   callback(Args);
 });
 ```
- 
-**Syntax:**
 
-`element.eventListener("event", callback);`
+### addEventListener() Options
 
-## Event Bubbling
-
-Event bubbling adalah ketika user melakukan trigger pada child element, lalu event pada parent element juga ikut tereksekusi.
-
-`parentElement.addEventListener("event", callback);`
-
-`childElement.addEventListener("event", callback);`
-
-
-## Event Delegation
-
-Event delegation adalah sebuah teknik yang digunakan untuk menangani seluruh event pada child element hanya dengan menggunakan event bubbling. Cukup menggunakan event listener pada parent element untuk menangani seluruh event pada child element.
-
-**Syntax:**
+Example:
 
 ```
-parentElement.eventListener("click" function(e) {
-  if (e.target.tagName === "child element") {
-    statements;
-  }
-});
+EventTarget.addEventListener("event", function(e) {
+   functionBody;
+}, {option: boolean});
+
+// Arrow Function Version
+EventTarget.addEventListener("event", (e) => {
+   functionBody;
+}, {option: boolean});
 ```
 
-## Capture Option
-
-Capture adalah sebuah argumen opsional yang digunakan untuk melakukan event capturing.
-
-**Syntax:**
-
-```
-element.eventListener("event", function() {
- callback;
-}, {capture: true});
-```
-
-**Syntax:**
-
-```
-element.eventListener("event", function() {
- callback;
-}, true);
-```
-
-**Syntax:**
-
-`element.EventListener("event", functionName, {capture: true});`
-
-`element.EventListener("event", functionName, true);`
-
-## Once Option
+#### 1. Once Option
 
 Once adalah sebuah argumen opsional yang digunakan untuk menjalankan function hanya satu kali pada event listener.
 
-**Syntax:**
+Example:
 
 ```
-element.eventListener("event", function() {
- callback;
+EventTarget.addEventListener("event", function(e) {
+   functionBody;
 }, {once: true});
 ```
-**Syntax:**
 
-`element.eventListener("event", callback, {once:true});`
+#### 2. Capture Option
 
-## HTML Event Attributes
+Capture adalah sebuah argumen opsional yang digunakan untuk melakukan event capturing.
 
-HTML event attribute adalah attribute yang digunakan untuk memanggil JavaScript function di dalam dokumen HTML.
+Example:
 
-**Mouse Event:** `onclick, ondblclick`
+```
+object.eventListener("event", function(e) {
+   functionBody;
+}, {capture: true});
+
+// Or like this
+object.eventListener("event", function(e) {
+   functionBody;
+}, true);
+```
+
+### removeEventListener() / EventTarget.removeEventListener() 
+
+Method yang digunakan untuk menghilangkan event dan function pada element node.
+
+### dispatchEvent() / EventTarget.dispatchEvent()

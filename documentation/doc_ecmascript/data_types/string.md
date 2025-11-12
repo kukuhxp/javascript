@@ -1,6 +1,6 @@
 # STRING TYPES
 
-## String Literal
+## String Primitive Value
 
 Example:
 
@@ -55,6 +55,32 @@ Example:
 a = 2;
 b = "buy";
 c = a.concat(b); // 2buy
+```
+
+## String Global Function
+
+Example:
+
+```
+// Number to String
+let angka = 123;
+let teks = String(angka);
+console.log(teks);        // "123"
+console.log(typeof teks); // "string"
+
+// Boolean to String
+let benar = true;
+let hasil = String(benar);
+console.log(hasil);        // "true"
+console.log(typeof hasil); // "string"
+
+// Null & Undefined
+console.log(String(null));      // "null"
+console.log(String(undefined)); // "undefined"
+
+// Array/Object to String
+console.log(String([1, 2, 3])); // "1,2,3"
+console.log(String({a: 1}));    // "[object Object]"
 ```
 
 ## Falsy String
@@ -161,21 +187,22 @@ Example:
 - Parameters: `Start, End`
 - Return Type: `String`
 - Example:
-   ```
-   /*
-    * If the one of index is negative, the index becomes zero (0)
-    * If the end index is negative, it swapped to start index
-    */
-    
-   string.substring(-5, 3); // 0, 3
    
-   /*
-    * If the start index > end index,
-    * the string is reversed. (3, -5) equivalent to (0, 3)
-    */
+```
+/**
+ * If the one of index is negative, the index becomes zero (0)
+ * If the end index is negative, it swapped to start index
+ */
     
-   string.substring(3, -5); // 3, 0
-   ```
+string.substring(-5, 3); // 0, 3
+   
+/**
+ * If the start index > end index,
+ * the string is reversed. (3, -5) equivalent to (0, 3)
+ */
+    
+string.substring(3, -5); // 3, 0
+```
 
 ### toLowerCase() / String.prototype.toLowerCase()
 

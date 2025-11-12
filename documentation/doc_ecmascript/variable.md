@@ -151,3 +151,54 @@ let value = 42;      // Number
 value = "Hello";     // String
 value = true;        // Boolean
 ```
+
+## Temporary Object
+
+Temporary object adalah objek yang dibuat secara otomatis dan hanya digunakan sementara waktu oleh JavaScript, lalu dihapus setelah tugasnya selesai.
+
+## Autoboxing
+
+Ketika kamu menggunakan nilai primitif seperti string, number, atau boolean) dan memanggil method di atasnya, JavaScript membuat temporary object agar method itu bisa dipanggil.
+
+Example:
+
+```
+// String variable
+const text = "Halo";
+console.log(text.toUpperCase());
+
+// Equivalent
+const temp = new String("Halo"); // Temporary Object
+const result = temp.toUpperCase();
+delete temp; // hapus (tidak disimpan)
+```
+
+## Immutable & Mutable Data Types
+
+Tipe data primitive di JavaScript bersifat **immutable**. Artinya nilainya tidak bisa diubah setelah dibuat.
+
+Example:
+
+```
+let name = "Kukuh";
+name[0] = "B";     // It doesn't change the string.
+console.log(name); // Output: "Kukuh".
+
+name = "Wukuh"; // Create a new string, not edit the old string.
+```
+
+Object dan Array di JavaScript bersifat **mutable**. Artinya: Nilainya bisa diubah setelah dibuat.
+
+Example:
+
+```
+let person = { name: "Kukuh", age: 25 };
+
+person.age = 26; // Properti can be changed.
+console.log(person); // { name: "Kukuh", age: 26 }
+
+let arr = [1, 2, 3];
+
+arr.push(4); // Can be changed.
+console.log(arr); // [1, 2, 3, 4]
+```

@@ -1,26 +1,8 @@
 # DOM TOKEN LIST INTERFACE		
 
-## Document Node Methods
+## DOM Token List Instance Methods
 
-- document.getElementById()
-- document.querySelector()
-- document.querySelectorAll()
-- document.getElementsByClassName()
-- document.getElementsByTagName()
+### contains() / DOMTokenList.contains()
 
-## Element Node Property
-
-- Element.classList
-- Element[index].classList
-
-# INSTANCE METHODS
-
-## contains()
-
-**Parameters:** Index
-
-**Return Type:** Undefined
-
-**Syntax:** DOMTokenList.item(index)
-
-**Example:** document.getElementsByClassName("my-class").item()
+- Parameters: `Index`
+- Return Type: ``

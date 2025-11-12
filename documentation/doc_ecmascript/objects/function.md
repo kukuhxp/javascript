@@ -130,24 +130,26 @@ object.next(); // next() is instance method
 
 ### 8. Immediately Invoked Function Expression (IIFE)
 
+Immediately Invoked Function Expression (IIFE) adalah fungsi yang langsung dipanggil saat dideklarasikan.
+
 Example:
 
 ```
 // IIFE
 (function(parameter, parameter n) {
   functionBody;
-})();
+})(Parameter, Parameter n);
 
 // IIFE Arrow Function
 ((parameter, parameter n) => {
   functionBody;
-})()
+})(Parameter, Parameter n)
    ```
 
 ### 9. Callback
 
-Callback adalah fungsi yang dikirim sebagai argumen ke fungsi lain, dan akan dipanggil kembali (callback) di dalamnya.
-   
+Callback adalah fungsi yang dikirim sebagai argumen ke fungsi lain, dan akan dipanggil kembali di dalamnya. Cara memanggil callback dilakukan melalui parameter pada fungsi lain.
+ 
 Example:
 
 ```
@@ -205,7 +207,9 @@ const kuadrat = [1, 2, 3].map(function(num) {
 });
 
 console.log(kuadrat); // [1, 4, 9]
-   ```
+```
+
+### 10. Async / Await Function
    
 ## Function as First-Class Citizen
 

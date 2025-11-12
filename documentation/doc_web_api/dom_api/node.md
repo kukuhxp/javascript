@@ -1,98 +1,55 @@
-# NODE INTERFACE
+# NODE INTERFACE	
 
-## Document Node Properties
+## Node Instance Properties
 
-- document.forms
-- document.images
+### childNodes / Node.childNodes
 
-## Document Node Methods
+- Status: `Read-only`
+- Value: `Node`
 
-- document.getElementById()
-- document.querySelector()
-- document.querySelectorAll()
-- document.getElementsByClassName()
-- document.getElementsByTagName()		
+### firstChild / Node.firstChild
 
-# INSTANCE PROPERTIES
+-Status: `Read-only`
+- Value: `Node`
 
-## childNodes
+### lastChild / Node.lastChild
 
-**Status:** Read-only
+- Status: `Read-only`
+- Value: `Node`
 
-**Value:** Node
+### nodeName / Node.nodeName
 
-**Syntax:** Node.firstChild
+- Status: `Read-only`
+- Value: `String`
 
-## firstChild
+### nodeType / Node.nodeType
 
-**Status:** Read-only
+- Status: `Read-only`
+- Value: `String`
 
-**Value:** Node
+### nodeValue / Node.nodeValue
 
-**Syntax:** Node.firstChild
+- Status: `Read-only`
+- Value: `String`
 
-## lastChild
+## textContent / Node.textContent
 
-**Status:** Read-only
+- tatus: `Writable`
+- Value: `String`
 
-**Value:** Node
+## Node Instance Methods
 
-**Syntax:** Node.lastChild
+### appendChild() / Node.appendChild()
 
-## nodeName
+- Parameters: `Node`
+- Return Type: `Node`
 
-**Status:** Read-only
+## replaceChld() / Node.replaceChild()
 
-**Value:** String
+- Parameters: `Node`
+- Return Type: `Node`
 
-**Syntax:** Node.nodeName
+## removeChild() / Node.removeChild(node)
 
-## nodeType
-
-**Status:** Read-only
-
-**Value:** String
-
-**Syntax:** Node.nodeType
-
-## nodeValue
-
-**Status:** Read-only
-
-**Value:** String
-
-**Syntax:** Node.nodeValue
-
-## textContent
-
-**Status:** Writable
-
-**Value:** String
-
-**Syntax:** Node.textContent
-
-# INSTANCE METHODS
-
-## appendChild()
-
-**Parameters:** Node
-
-**Return Type:** Node
-
-**Syntax:** Node.appendChild()
-
-## replaceChld()
-
-**Parameters:** Node
-
-**Return Type:** Node
-
-**Syntax:** Node.replaceChild(old child, new child)
-
-## removeChild()
-
-**Parameters:** Node
-
-**Return Type:** Undefined
-
-**Syntax:** Node.removeChild(node)
+- Parameters: `Node`
+- Return Type: `Undefined`

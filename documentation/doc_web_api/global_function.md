@@ -2,31 +2,50 @@
 
 Window adalah objek global yang memiliki beberapa metode bawaan. Metode bawaan milik window sering disebut juga sebagai fungsi global, sehingga kita tidak perlu.menggunakan objek window saat ingin menggunakan metodenya.
 
-Contoh:
+## alert() / window.alert()
 
-1. Alert
+Example:
+   
+```
+window.alert(args);
+alert(args);
+```
+   
+## prompt() / window.prompt()
+ 
+Example:
+  
+```
+window.prompt(args);
+prompt(args)
+```
+   
+## setTimeout() / window.setTimeout()
 
-   Syntax:
-   
-   ```
-   window.alert();
-   alert()
-   ```
-   
-2. Prompt
+## clearTimeout() / window.clearTimeout()
 
-   Syntax:
-   
-   ```
-   window.prompt();
-   prompt()
-   ```
-   
-3. Set Timeout
-4. Clear Timeout
-5. Set Interval
-6. Clear Interval
-7. Parse Int
-8. Parse Float
-9. Is NaN
-10. Number
+## setInterval() / window.setInterval()
+
+## clearInterval() / window.clearInterval()
+
+## parseInt() / window.parseInt()
+
+## parseFloat / window.parseInt()
+
+## isNaN() / window.isNaN()
+
+## String() / window.String()
+
+## Number() / window.Number()
+
+## Boolean() / window.Boolean()
+
+## Object() / window.Object()
+
+## Array() / window.Array()
+
+## Function() / window.Function()
+
+## Symbol() / window.Symbol()
+
+## BigInt() / window.BigInt()

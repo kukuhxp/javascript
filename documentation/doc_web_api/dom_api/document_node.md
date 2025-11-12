@@ -1,366 +1,206 @@
-# DOCUMENT INTERFACE		
+# DOCUMENT NODE INTERFACE		
 
-# CONSTRUCTOR
+## Private Constructor Function
 
-## Document()
+Example:
 
-# INSTANCE CLASS
+`new Document();`
 
-## document
+## Document Instance Properties
 
-# INSTANCE PROPERTIES
+### all / document.all
 
-## all
+- Status: `Writable`
+- Value: `HTMLCollection`
 
-**Status:** Writable
+### cookie / document.cookie
 
-**Value:** HTML Collection
+- Status: `Writable`
+- Value: `String`
 
-**Syntax:** document.all
+### domain / document.domain
 
+- Status: `Writable`
+- Value: `String`
 
-## cookie
+### documentURl / document.documentURl
 
-**Status:** Writable
+- Status: `Read-only`
+- Value: `String`
 
-**Value:** String
+### URL / document.URL
 
-**Syntax:** document.cookie
+- Status: `Read-only`
+- Value: `String`
 
-## domain
+### head / document.head
 
-**Status:** Writable
+- Status: `Read-only`
+- Value: `Element Node`
 
-**Value:** String
+### title / document.title
 
-**Syntax:** document.domain
+- Status: `Writable`
+- Value: `String / "Title of Document"`
 
-## documentURl
+### body / document.body
 
-**Status:** Read-only
+- Status: `Writable`
+- Value: `Element Node / HTML Body`
 
-**Value:** String
+### forms / document.forms
 
-**Syntax:** document.documentURl
+- Status: `Read-only`
+- Value: `HTMLCollection / HTML Forms`
 
+### images / document.images
 
-## URL
+- Status: `Read-only`
+- Value: `HTMLCollection / HTML Images`
 
-**Status:** Read-only
+### links / document.links
 
-**Value:** String
+- Status: `Read-only`
+- Value: `HTMLCollection / HTML Links`
 
-**Syntax:** document.URL
+### embeds / document.embeds
 
-## head
+- Status: `Read-only`
+- Value: `HTMLCollection / HTML Embeds`
 
-**Status:** Read-only
+### plugins / document.plugins
 
-**Value:** Element Node
+- Status: `Read-only`
+- Value: `HTMLCollection`
 
-**Syntax:** document.head
+### scripts / document.scripts
 
-## title
+- Status: `Read-only`
+- Value: `HTMLCollection`
 
-**Status:** Writable
+### fonts / document.fonts
 
-**Return Type:** String
+- Status: `Read-only`
+- Value: `Interface (FontFaceSet)`
 
-**Value:** Title of Document
+### children / document.children
 
-**Syntax:** document.title
+- Status: `Read-only`
+- Value: `HTMLCollection`
 
-## body
+### firstChildElement / document.firstChildElement
 
-**Status:** Writable
+- Status: `Read-only`
+- Value: `Element`
 
-**Return Type:** Element Node
+### lastChildElement / document.lastChildElement
 
-**Value:** Body Element
+- Status: `Read-only`
+- Value: `Element`
 
-**Syntax:** document.body
+### implementation / document.implementation
 
-## forms
+- Status: `Read-only`
+- Value: `Interface (DOMImplementation)`
 
-**Status:** Read-only
+### documentElement / document.documentElement
 
-**Return Type:** HTML Collection
+- Status: `Read-only`
+- Value: `Element`
 
-**Value:** Form Element Collection
+## Document Node Instance Methods
 
-**Syntax:** document.forms
+### createElement() / document.createElement()
 
-## images
+- Parameters: `String, Object`
+- Return Type: `Element`
 
-**Status:** Read-only
+### createAttribute() / document.createAttribute()
 
-**Value:** HTML Collection
+- Parameters: `String, Object`
+- Return Type: `Attr`
 
-**Syntax:** document.images
+### createTextNode() / document.createTextNode()
 
-## links
+- Parameters: `String, Object`
+- Return Type: `Text`
 
-**Status:** Read-only
+### createComment() / document.createComment()
 
-**Value:** HTML Collection
+- Parameters: `String, Object`
+- Return Type: `Comment`
 
-**Syntax:** document.links
+### createDocumentFragment() / document.createDocumentFragment()
 
-## embeds
+- Parameters: `None`
+- Return Type: `Document Fragment`
 
-**Status:** Read-only
+### getElementById() / document.getElementById()
 
-**Value:** HTML Collection
+- Parameters: `String, Object`
+- Return Type: `Element`
 
-**Syntax:** document.embeds
+### getElementsByClassName() / document.getElementsByClassName()
 
-## plugins
+- Parameters: `String, Object`
+- Return Type: `HTMLCollection`
 
-**Status:** Read-only
+### getElementsByTagName() / document.getElementsByTagName()
 
-**Value:** HTML Collection
+- Parameters: `String, Object`
+- Return Type: `HTMLCollection`
 
-**Syntax:** document.plugins
+### getElementsByName() / document.getElementsByName()
 
-## scripts
+- Parameters: `String, Object`
+- Return Type: `NodeList`
 
-**Status:** Read-only
+### querySelector() / document.querySelector()
 
-**Value:** HTML Collection
+- Parameters: `String, Object`
+- Return Type: `Element`
 
-**Syntax:** document.scripts
+### querySelectorAll() / document.querySelectorAll()
 
-## fonts
+- Parameters: `String, Object`
+- Return Type: `NodeList`
 
-**Status:** Read-only
+### importNode() / document.importNode()
 
-**Value:** Interface (FontFaceSet)
+- Parameters: `Node, DocumentFragment, Boolean`
+- Return Type: `Node`
 
-**Part of:** CSS Font Loading API
+### getSelection() / document.getSelection()
 
-**Syntax:** document.fonts
+- Parameters: `None`
+- Return Type: `Object/Null`
 
-## children
+### elementsFromPoint() / document.elementsFromPoint()
 
-**Status:** Read-only
+- Parameters: `Number`
+- Return Type: `Array`
 
-**Value:** HTML Collection
+### hasFocus() / document.hasFocus()
 
-**Syntax:** document.children
+- Parameters: `None`
+- Return Type: `Boolean`
 
-## firstChildElement
+### open() / document.open()
 
-**Status:** Read-only
+- Parameters: `None`
+- Return Type: `Document`
 
-**Value:** Element Node
+### write() / document.write()
 
-**Syntax:** document.firstChildElement
+- Parameters: `String, Object`
+- Return Type: `Undefined`
 
-## lastChildElement
+### writeln() / document.writeln()
 
-**Status:** Read-only
+- Parameters: `String, Object`
+- Return Type: `Undefined`
 
-**Value:** Element Node
+### close() / document.close()
 
-**Syntax:** document.lastChildElement
-
-## implementation
-
-**Status:** Read-only
-
-**Value:** Interface (DOMImplementation)
-
-**Syntax:** document.implementation
-
-## documentElement
-
-**Status:** Read-only
-
-**Value:** Interface (Element Node)
-
-**Syntax:** document.documentElement
-
-## scrollingElement
-
-**Status:** Read-only
-
-**Value:** Interface (Element Node)
-
-**Syntax:** document.scrollingElement
-
-
-# INSTANCE METHODS
-
-## createElement()
-
-**Parameters:** String, Object
-
-**Return Type:** Element Node
-
-**Syntax:** document.createElement(element name)
-
-**Example:** document.createElement("p")
-
-## createAttribute()
-
-**Parameters:** String, Object
-
-**Return Type:** Attribute Node (Attr)
-
-**Syntax:** document.createAttribute(attribute name)
-
-**Example:** document.createAttribute("src")
-
-## createTextNode()
-
-**Parameters:** String, Object
-
-**Return Type:** Text Node
-
-**Syntax:** document.createTextNode(text)
-
-**Example:** document.createTextNode("JavaScript")
-
-## createComment()
-
-**Parameters:** String, Object
-
-**Return Type:** Comment Node
-
-**Syntax:** document.createComment(data)
-
-**Example:** document.createComment("This is a comment section")
-
-## createDocumentFragment()
-
-**Parameters:** None
-
-**Return Type:** Document Fragment Node
-
-**Syntax:** document.createDocumentFragment() / new DocumentFragment()
-
-## getElementById()
-
-**Parameters:** String, Object
-
-**Return Type:** Element Node
-
-**Syntax:** document.getElementById(id name)
-
-**Example:** document.getElementById("my-id")
-
-## getElementsByClassName()
-
-**Parameters:** String, Object
-
-**Return Type:** HTML Collection
-
-**Syntax:** document.getElementsByClassName(class name)
-
-**Example:** document.getElementsByClassName("my-class")
-
-## getElementsByTagName()
-
-**Parameters:** String, Object
-
-**Return Type:** HTML Collection
-
-**Syntax:** document.getElementsByTagName(tag name)
-
-**Example:** document.getElementsByTagName("button")
-
-## getElementsByName()
-
-**Parameters:** String, Object
-
-**Return Type:** Node List
-
-**Syntax:** document.getElementsByName(name attribute)
-
-## querySelector()
-
-**Parameters:** String, Object
-
-**Return Type:** Element Node
-
-**Syntax:** document.querySelector(css selector)
-
-**Example:** document.querySelector(".my-class")
-
-## querySelectorAll()
-
-**Parameters:** String, Object
-
-**Return Type:** Node List
-
-**Syntax:** document.querySelectorAll(css selector)
-
-**Example:** document.querySelectorAll(".my-class")
-
-## importNode()
-
-**Parameters:** Node, DocumentFragment, Boolean
-
-**Return Type:** Node
-
-**Syntax:** document.querySelector(external node, deep)
-
-## getSelection()
-
-**Parameters:** None
-
-**Return Type:** Object/Null
-
-**Syntax:** document.getSelection()
-
-## elementsFromPoint()
-
-**Parameters:** Number
-
-**Return Type:** Array
-
-**Syntax:** document.elementsFromPoint()
-
-## hasFocus()
-
-**Parameters:** None
-
-**Return Type:** Boolean
-
-**Syntax:** document.hasFocus()
-
-## open()
-
-**Parameters:** None
-
-**Return Type:** Document Node
-
-**Syntax:** document.open()
-
-## write()
-
-**Parameters:** String, Object
-
-**Return Type:** Undefined
-
-**Syntax:** document.write(object)
-
-**Example:** document.write("Hello world")
-
-## writeln()
-
-**Parameters:** String, Object
-
-**Return Type:** Undefined
-
-**Syntax:** document.writeln(object)
-
-**Example:** document.writeln("Hello world")
-
-## close()
-
-**Parameters:** None
-
-**Return Type:** Undefined
-
-**Syntax:** document.close()
+- Parameters: `None`
+- Return Type: `Undefined`

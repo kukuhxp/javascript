@@ -300,3 +300,11 @@ General parameter adalah parameter yang umum digunakan saat mendeklarasikan sebu
 ### 5. Object Parameter
 
 ### 6. Array Parameter
+
+## Function Instance Methods
+
+### bind() / Function.prototype.bind()
+
+### call() / Function.prototype.call()
+
+### apply () / Function.prototype.apply()

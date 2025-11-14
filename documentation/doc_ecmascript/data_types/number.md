@@ -18,4 +18,4 @@ variable = Infinity;
 variable = NaN;
 ```
 
-# INSTANCE METHODS
+## Number Instance Methods

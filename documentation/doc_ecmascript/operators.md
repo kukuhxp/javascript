@@ -1,5 +1,60 @@
 # OPERATORS
 
+## Arithmetic Operators
+
+### 1. Modulus (%)
+
+Modulus adalah operator untuk mencari sisa hasil pembagian dua angka.
+
+Syntax:
+
+`a % b = sisa dari a - (b × pembagian_bulat)`
+
+#### Dividend and Divisor
+
+Dalam operasi modulus (%), jika angka di sebelah kiri **(dividend)** lebih kecil dari angka di sebelah kanan **(divisor)**, maka hasil modulus adalah angka sebelah kiri itu sendiri, karena, belum cukup besar untuk dibagi sekali pun.
+
+Example:
+
+```
+1 % 5 = 1
+2 % 5 = 2
+3 % 5 = 3
+1 % 7 = 1
+2 % 7 = 2
+3 % 7 = 3
+```
+
+Jika angka di sebelah kiri lebih besar dari angka di sebelah kanan, maka hasil modulus adalah angka sebelah kiri dibagi dengan angka sebelah kanan, lalu hasilnya dikurangi dengan angka sebelah kanan.
+
+Example:
+
+```
+15 % 5 = 0 // 15 - (5 x 3) = 0
+16 % 5 = 1 // 16 - (5 x 3) = 1
+35 % 15 = 5 // 35 - (15 x 2) = 5
+36 % 15 = 6 // 36 - (15 x 2) = 6
+
+```
+
+#### Modulus and Looping
+
+Modulus (%) adalah operator untuk mendapatkan sisa pembagian
+dan sering dipakai untuk membuat pola berulang atau rotasi otomatis.
+
+Example:
+
+```
+1 % 4 = 1
+2 % 4 = 2
+3 % 4 = 3
+4 % 4 = 0
+5 % 4 = 1
+6 % 4 = 2
+7 % 4 = 3
+8 % 4 = 0
+```
+
 ## Increment / Decrement
 
 ### 1. Pre-increment / Pre-decrement Operators

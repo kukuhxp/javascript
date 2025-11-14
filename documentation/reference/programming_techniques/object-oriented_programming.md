@@ -6,6 +6,49 @@ Object-oriented Programming (OOP) atau Pemrograman Berorientasi Objek adalah par
 
 Konsep encapsulation atau enkapsulasi, yaitu menyembunyikan detail internal dan hanya menampilkan hal penting. Properti dibuat private, hanya bisa diubah lewat method.
 
+Example:
+
+```
+function User(name, password) {
+  let _password = password; // Private via closure
+
+  this.name = name;
+
+  this.checkPassword = function(pass) {
+    return _password === pass;
+  };
+}
+
+const u = new User("Kukuh", "12345");
+console.log(u.name); // Public
+console.log(u._password); // Undefined ❌
+console.log(u.checkPassword("12345")); // True ✅
+```
+
+### Private Field (ES2022)
+
+Example:
+
+```
+class User {
+  #password; // Private Field
+
+  constructor(name, password) {
+    this.name = name;
+    this.#password = password;
+  }
+
+  checkPassword(pass) {
+    return this.#password === pass;
+  }
+}
+
+const u = new User("Kukuh", "12345");
+console.log(u.name);        // It can be accessed (public)
+console.log(u.#password);   // ❌ Error! it can't be accessed directly.
+console.log(u.checkPassword("12345")); // True ✅
+```
+
 ## Polymorphism
 
 Konsep polymorphism memungkinkan method yang sama memiliki perilaku berbeda tergantung objek yang memanggilnya. Jenis-jenis polymorphism:
